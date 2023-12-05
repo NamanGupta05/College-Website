@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+
+font-family: 'Roboto', sans-serif;
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(9, 15, 41, 0.7), rgba(9, 15, 40, 0.7)),
+                        url("E:/project-3/colleege.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img{
+    width: 220px;
+}
+
+.unorder-list{
+    flex: 1;
+    text-align: right;
+}
+.list{
+    list-style: none;
+    display: inline-block;
+    padding: 0.7rem;
+    position: relative;
+}
+.list a{
+    color: white;
+    padding: 0.8rem;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.list::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #f44336;
+    transition: 0.5s;
+}
+.list:hover::after{
+width: 100%;
+}
+
+.text-box{
+    height: 90%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+}
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 15px;
+}
+
+.content{
+    color:white;
+    display: inline-block;
+    border: 1px solid white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px;
+   text-align: center;
+    font-size: 20px;
+}
+.content:hover{
+    border: 2px solid grey;
+    background: rgb(229, 155, 155);
+    transition: 1s;
+}
+.navbar i{
+    display: none;
+}
+
+@media(max-width : 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-side{
+        position: fixed ;
+        background: #070342;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        z-index: 2;
+        text-align: left;
+        transition: 1s;
+
+    }
+    .navbar i{
+        text-align: left;
+        font-size: 15px;
+        display: block;
+        color: white;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+    .group{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .text{
+        margin-top: 10px;
+    }
+    .cta h1{
+        font-size: 15px;
+    }
+    .content{
+        font-size: 14px;
+    }
+    .content:hover{
+        border: 2px solid grey;
+        background: rgb(229, 155, 155);
+        transition: 1s;
+    }
+
+}
+
+.Courses{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4% ;
+}
+
+h1{
+    font-size: 35px;
+    font-weight: 700;
+}
+p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
+    padding: 8px;
+}
+.group{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    flex-basis: 31%;
+    border: 2px solid transparent;
+    border-radius: 25px ;
+    padding-top : 10px;
+    margin-right: 20px;
+    background-color: rgb(124, 124, 181);
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.text h3{
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+}
+.text p{
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(222, 216, 216);
+}
+.text:hover{
+    box-shadow: 0 0 20px 0px rgba(9, 15, 40, 0.7);
+}
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4%;
+}
+.campus h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+.campus p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.pic{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.pic:hover{
+    box-shadow: 0 0 20px 0px rgba(9, 15, 40, 0.7);
+    background-color: rgb(11, 22, 32) s;
+}
+.layer h3{
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(44, 28, 28);
+    width: 100%;
+    bottom: 0;
+    left: 10px;
+    transform: translate(-5%);
+    position: absolute;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.facility{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.facility img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+.facility p{
+    padding: 0;
+    font-size: 15px;
+    color: #070342;
+  
+}
+.facility h3{
+    font-size: 25px;
+    color: black;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.testimonial{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4%;
+}
+.student{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f6b3ae;
+    display: flex;
+    box-sizing: border-box;
+    transition: 3s;
+    
+}
+.student img{
+    height: 20%;
+    width: 30%;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+} 
+.student h3{
+    font-size: 25px;
+font-weight: 600;
+color: white;
+}
+.student p{
+   
+    font-size: 15px;
+}
+.student:hover{
+    box-shadow: 0 0 20px 0px #070342;
+    background-color: #070342;
+    color: aliceblue;
+}
+.cta{
+    margin: 10px auto;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url(banner2.jpg);
+    height: 30%;
+
+    width: 80%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 10px;
+    
+}
+.cta h1{
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.footer{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+
+}
+.work{
+    color: #f44336;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.sub-header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(9, 15, 41, 0.7), rgba(9, 15, 40, 0.7)),
+                        url("background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.about-work{
+    margin-top: 100px;
+
+    text-align: center;
+
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.about{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.about-img{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+border-radius: 20px;
+}
+
+.finalbar{
+    color: black;
+    display: inline-block;
+    border: 1px solid black;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px;
+   text-align: center;
+    font-size: 20px;
+    transition: 5s;
+}
+.finalbar:hover{
+    background-color: #f6b3ae;
+}
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h2{
+    color: #070342;
+    background-color: #f44336;
+    text-align: center;
+    padding: 2px;
+}
+.blog-right div{
+    display: flex;
+    justify-content: space-between;
+    color: #070342;
+    background-color: #f6b3ae;
+    padding: 3px;
+    align-items: center;
+    box-sizing: border-box;
+}
+.comment{
+    border: 1.5px solid black;
+    margin: auto;
+    padding: 10px;
+}
+.command h2{
+    text-align: left;
+}
+.commentarea input,.commentarea textarea{
+outline: none;
+border: none;
+width: 100%;
+margin: 5px;
+padding: 2px;
+box-sizing: border-box;
+background-color: #f0f0f0;
+color: #070342;
+}
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.location iframe{
+    width: 100% ;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact{
+    flex-basis: 25%; ;
+}
+.group div{
+    flex-direction: column;
+}
+.contact div{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    
+}
+.contactinfo{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px;
+}
+.contactinfo input, .contactinfo textarea{
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+    width: 100%;
+margin: 5px;
+padding: 2px;
+box-sizing: border-box;
+}
